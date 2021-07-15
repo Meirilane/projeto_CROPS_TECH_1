@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>Brasil News</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="_style/style.css">
+  <link rel="shortcut icon" href="image/logo_favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://wa.me/55(8894911832)?text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+      z-index:1000;" target="_blank">
+      <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+  </a>
+  <style>
+    body {
+      background-image: url(https://images.unsplash.com/photo-1560493676-04071c5f467b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1568&q=80);
+    }
+  </style>
+
+<script>
+  
+
+  function verificarCPF(c){
+  var i;
+  s = c;
+  var c = s.substr(0,9);
+  var dv = s.substr(9,2);
+  var d1 = 0;
+  var v = false;
+
+  for (i = 0; i < 9; i++){
+      d1 += c.charAt(i)*(10-i);
+  }
+  if (d1 == 0){
+      alert("CPF Inválido")
+      v = true;
+      return false;
+  }
+  d1 = 11 - (d1 % 11);
+  if (d1 > 9) d1 = 0;
+  if (dv.charAt(0) != d1){
+      alert("CPF Inválido")
+      v = true;
+      return false;
+  }
+
+  d1 *= 2;
+  for (i = 0; i < 9; i++){
+      d1 += c.charAt(i)*(11-i);
+  }
+  d1 = 11 - (d1 % 11);
+  if (d1 > 9) d1 = 0;
+  if (dv.charAt(1) != d1){
+      alert("CPF Inválido")
+      v = true;
+      return false;
+  }
+  if (!v) {
+      alert(c + "\nCPF Válido")
+  }
+}  
+</script>
+</head>
+
+<body>
+
+  <div class="container-fluid bgnav">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar  navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img class="imgLogo" src="img/Image-logo.jpeg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+
+            <div>
+              <a class="nav-item nav-link" href="index.html">Inicio</a>
+            </div>
+            <div>
+              <a class="nav-item nav-link" href="quem_somos.html">Quem somos</a>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn  dropdown-toggle" style="color: aliceblue;" type="button" id="menudrop"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Informativo
+              </button>
+              <div class="dropdown-menu" aria-labelledby="menudrop">
+                <a class="dropdown-item" href="informativos.html#engagri">O que é engenharia Agrícola?</a>
+                <a class="dropdown-item" href="informativos.html#agrifam">Agricultura Familiar</a>
+                <a class="dropdown-item" href="informativos.html#mecagri">Mecanização Agrícola</a>
+                <a class="dropdown-item" href="informativos.html#agroneg">Agronegócio</a>
+                <a class="dropdown-item" href="informativos.html#irrigdren">Irrigação e Drenagem</a>
+                <a class="dropdown-item" href="informativos.html#cultconserv">Cultivo e conservação do solo</a>
+                <a class="dropdown-item" href="informativos.html#pegaecol">Pegada Ecológica</a>
+                <a class="dropdown-item" href="informativos.html#nutriplan">Nutrição de plantas</a>
+                <a class="dropdown-item" href="informativos.html#agriorg">Agricultura Orgânica</a>
+                <a class="dropdown-item" href="informativos.html#agrotx">Agrotóxico</a>
+              </div>
+            </div>
+
+            <div>
+              <a class="nav-item nav-link" href="contato.html">Contato</a>
+            </div>
+
+          </div>
+        </div>
+        <!-- <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form> -->
+      </nav>
+    </div>
+  </div>
+
+  
+
+  <form class="container">
+    <h2></h2>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="nome">Nome</label>
+        <input class="form-control" type="text" id="emailCampo" placeholder="digite seu nome">
+      </div>
+      <div class="form-group col-md-6">
+        <label class="nome">Sobrenome</label>
+        <input class="form-control" type="text" id="emailCampo" placeholder="digite seu sobrenome">
+      </div>
+    </div>
+        
+    <div class="form-group">
+      <label class="nome">CPF</label>
+      <input class="form-control" type="text" id="cpf" placeholder="000.000.000-00" onblur="return verificarCPF(this.value)">
+  </div>
+
+    <div class="form-group">
+        <label class="nome">E-mail</label>
+        <input class="form-control" type="text" id="emailCampo" placeholder="seuemail@seuemail.com">
+    </div>
+
+    <div class="form-group">
+        <label for="selectCampo">Sexo:</label>
+            <select class="form-control">
+                <option>Selecione</option>
+                <option>Feminino</option>
+                <option>Masculino</option>
+                <option>Não informar</option>
+            </select>
+        </div>
+
+    <div class="form-group">
+        <label for="selectCampo">Qual seu nível de conhecimento?</label>
+            <select class="form-control">
+                <option>Selecione</option>
+                <option>Estudante</option>
+                <option>Técnico</option>
+                <option>Profissional</option>
+            </select>
+        </div>
+
+    <div class="form-group">
+        <p>Aceita os termos de uso?</p>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="radio" value="sim" class="form-check-input">
+              <label class="form-check-label" for="html">Sim</label>
+           </div>
+
+           <div class="form-check form-check-inline">
+             <input type="radio" name="radio" value="não" class="form-check-input">
+             <label class="form-check-label" for="css">Não</label>
+           </div>
+           <button class="btn btn-primary" type="submit" id="button">enviar📝</button>
+</form>    
+  
+
+  </div>
+  <!-- FOOTER-->
+  <div class="row cor4 ">
+    
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="col-2"></div>
+      <div class="col-7">
+          <i class="fa fa-copyright" aria-hidden="true">
+          <small style="color: white;">&copy; Copyright 2021, Wytoria Rodrigues |<wbr> Meirilane do Nascimento |<wbr> Carolina Farnetani |<wbr>  Jonatas Almeida | Rodnei Dias
+
+        </small></i>
+      </div>
+     <div class="col-3">
+        <p>
+        <a href=""><img src="icones/facebook (2).png" alt=""></a>
+        <a href=""><img src="icones/instagram (3).png" alt=""></a>
+        <a href=""><img src="icones/linkedin (3).png" alt=""></a>
+        <a href=""><img src="icones/soulcode.jpg" alt=""></a>     
+      </p>
+      </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+
+    
+</body>
+
+</html>
